@@ -7,6 +7,8 @@ import (
 	"gorm.io/gorm"
 )
 
+var db *gorm.DB
+
 type URL struct {
 	ID       uint64 `json:"id" gorm:"primaryKey"`
 	Redirect string `json:"redirect" gorm:"not null"`
@@ -28,4 +30,6 @@ func Setup() {
 	if err != nil {
 		log.Println(err)
 	}
+
+	db = db
 }
