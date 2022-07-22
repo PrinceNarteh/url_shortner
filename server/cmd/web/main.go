@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"url_shortener/pkg/model"
+)
 
 func main() {
-	fmt.Println("URL Shortener")
+	model.Setup()
 }
