@@ -17,7 +17,7 @@ type URL struct {
 
 func Setup() {
 	var err error
-	dns := "host=172.17.0.2 user=postgres password=root dbname=shortener sslmode=disable"
+	dns := "host=localhost user=postgres password=root dbname=shortener port=5432 sslmode=disable"
 
 	db, err := gorm.Open(postgres.Open(dns), &gorm.Config{})
 	if err != nil {
